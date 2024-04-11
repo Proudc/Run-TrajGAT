@@ -1,0 +1,144 @@
+model: 'TrajGAT'
+data: 'Portotest'
+dis_type: 'haus'
+length: 'long'
+optimizer: 'Adam'
+init_lr: 0.001
+
+
+
+seed: 666
+
+max_nodes: 50
+max_depth: 50
+
+
+# porto
+sample_num: 20
+
+# geolife
+# sample_num: 10
+
+alpha: 16
+train_data_range: [0, 3000]
+val_data_range: [3000, 3500]
+num_workers: 10
+
+# porto
+train_batch_size: 2
+
+# geolife
+# train_batch_size: 2
+
+eval_batch_size: 10
+matrix_cal_batch: 100
+epoch: 1
+# epoch: 20
+
+
+d_input: 4
+
+# geolife
+# d_model: 24
+# porto
+d_model: 32
+
+# geolife
+# num_head: 6
+# porto
+num_head: 8
+num_encoder_layers: 3
+
+encoder_dropout: 0.01
+in_feat_dropout: 0.0
+d_lap_pos: 8
+
+batch_norm: True
+layer_norm: False
+use_bias: False
+
+
+weight_decay: 0.0
+lr_reduce_factor: 0.5
+lr_schedule_patience: 10
+
+
+traj_path: 'data/0_Test_porto/traj_list'
+dis_matrix_path: 'data/0_Test_porto/distance_matrix'
+test_matrix_path: 'data/0_Test_porto/distance_matrix'
+
+train_traj_path: 'data/0_Test_porto/traj_list'
+val_traj_path: 'data/0_Test_porto/traj_list'
+
+
+
+write_path: '/mnt/data_hdd1/czh/TrajGAT/result/{}_{}_{}_embedding'
+
+model_best_wts_path: '/mnt/data_hdd1/czh/TrajGAT/result/{}_{}_{}_{}_model.pkl'
+
+
+# data_features: [-8.616178175552571, 0.05779256281472269, 41.1594322983062, 0.07500122113317888]
+# x_range: [-15.630759, -3.930948]
+# y_range: [36.886104, 45.657225]
+
+data_features: [-8.621844075435732, 0.03623424796460726, 41.16551839370855, 0.024516968549842835]
+x_range: [-8.73, -8.5]
+y_range: [41.10, 41.24]
+
+
+
+
+
+# model: 'TrajGAT'
+# data: 'Porto'
+# dis_type: 'HausdorffALL'
+# length: 'long'
+# optimizer: 'Adam'
+# init_lr: 0.001
+
+
+
+# seed: 2021
+# max_nodes: 50
+# max_depth: 50
+# sample_num: 20
+# alpha: 16
+# train_data_range: [0, 6000]
+# val_data_range: [6000, 10000]
+# num_workers: 10
+
+# train_batch_size: 2
+# eval_batch_size: 10
+# matrix_cal_batch: 100
+# epoch: 100
+
+
+# d_input: 4
+# d_model: 32
+# num_head: 8
+# num_encoder_layers: 3
+# encoder_dropout: 0.01
+# in_feat_dropout: 0.0
+# d_lap_pos: 8
+
+# batch_norm: True
+# layer_norm: False
+# use_bias: False
+
+
+# weight_decay: 0.0
+# lr_reduce_factor: 0.5
+# lr_schedule_patience: 10
+
+
+# traj_path: 'data/trajs_10000.pkl'
+# dis_matrix_path: 'data/dis_matrix_10000x10000.pkl'
+
+
+# model_best_wts_path: 'model/wts/{}_{}_{}_{}_wts_hr10 {:.4f}.pkl'
+
+
+# data_features: [-8.616178175552571, 0.05779256281472269, 41.1594322983062, 0.07500122113317888]
+# x_range: [-15.630759, -3.930948]
+# y_range: [36.886104, 45.657225]
+
